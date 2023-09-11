@@ -2,8 +2,10 @@ package pageActions;
 
 import java.util.List;
 import org.testng.Assert;
+
+import PagesObjects.*;
+
 import org.openqa.selenium.WebElement;
-import PagesObjects.DownloadsPage;
 import webDriverSetup.WebDriverSetup;
 
 public class DownloadsPageAction extends WebDriverSetup {

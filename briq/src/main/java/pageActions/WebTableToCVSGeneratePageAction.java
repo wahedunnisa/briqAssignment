@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import com.opencsv.CSVWriter;
 
@@ -16,7 +16,6 @@ import PagesObjects.WebTableToCSVGeneratePage;
 import utils.Contants;
 import utils.dateFormat;
 import webDriverSetup.WebDriverSetup;
-import org.testng.Assert;
 
 public class WebTableToCVSGeneratePageAction extends WebDriverSetup{
 

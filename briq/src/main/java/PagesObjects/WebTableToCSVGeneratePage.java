@@ -1,12 +1,6 @@
 package PagesObjects;
 
-import java.util.Properties;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import webDriverSetup.WebDriverSetup;
 
 public interface WebTableToCSVGeneratePage {
 	

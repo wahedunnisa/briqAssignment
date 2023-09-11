@@ -2,11 +2,7 @@ package Tests;
 
 import org.testng.annotations.Test;
 
-import PagesObjects.DownloadsPage;
 import pageActions.DownloadsPageAction;
-import pageActions.UploadsPageAction;
-import pageActions.WebTableToCVSGeneratePageAction;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 

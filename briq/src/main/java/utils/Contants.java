@@ -2,6 +2,9 @@ package utils;
 
 public interface Contants {
 		
-	String downloadesPath = System.getProperty("user.dir")+"\\DownloadedFiles";
+	String downloadesPath = "\\HOME\\briq";
+	
+	String downloadesPath2 = System.getProperty("user.dir")+"\\DownloadedFiles";
+	
 
 }
