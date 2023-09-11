@@ -32,7 +32,7 @@ public class WebTableToCVSGeneratePageAction extends WebDriverSetup{
 		Assert.assertTrue(driver.findElement(WebTableToCSVGeneratePage.elementInPage).isDisplayed());
 	}
 
-	//Reading data on wenpage into the table
+	//Reading data on webpage into the table
 	public void readDataIntoTable() {		
 		List<WebElement> columns = driver.findElements(WebTableToCSVGeneratePage.columnsLocator);
 		int rows = driver.findElements(WebTableToCSVGeneratePage.rowsLocator).size();
@@ -40,13 +40,14 @@ public class WebTableToCVSGeneratePageAction extends WebDriverSetup{
 		for(int i = 0 ; i<rows; i++) table.add(new ArrayList());
 
 		for(int i=0;i<columns.size()-1 ; i++) {
-
+			//Reading headers
 			table.get(0).add(columns.get(i).getText());
 		}
 
 		for(int i = 1; i<rows ; i++) {
 			//Reading data rows and storing in arraylist
-			for(int j = 1;j<columns.size();j++) {		
+			for(int j = 1;j<columns.size();j++) {	
+				//dynamic xpath to capture values in all cells
 				table.get(i).add(driver.findElement(By.xpath(WebTableToCSVGeneratePage.cellPartialLocator+String.valueOf(i)+"]/td["+String.valueOf(j)+"]")).getText());
 			}
 		}
@@ -58,7 +59,7 @@ public class WebTableToCVSGeneratePageAction extends WebDriverSetup{
 		try {
 
 			File file = new File(Contants.downloadesPath+"/webtable_"+dateFormat.currentDate()+".csv");
-			CSVWriter csvWriter = new CSVWriter(new FileWriter(file));
+			CSVWriter csvWriter = new CSVWriter(new FileWriter(file)); // Creating new CSV file writer
 			for(ArrayList<String> row : table) {
 				String[] rowStr = row.toArray(new String[row.size()]);
 				csvWriter.writeNext(rowStr);
