@@ -31,6 +31,7 @@ public class DownloadsPageAction extends WebDriverSetup {
 	public void downloadAllFiles() {
 		List<WebElement> downloadElementsList = this.getDownloadElements();
 		for(WebElement element : downloadElementsList) {
+			//Downloading Non-png files
 			if(!element.getText().contains(".png") ) {
 				element.click();
 			}
