@@ -26,16 +26,19 @@ public class API {
 	private static Response response;
 	private static String responseStr;
 
+	//Set base URL
 	public static void setBaseURL() {
 		RestAssured.baseURI = Constants.URL;
 	}
 
+	//Get response on API request
 	public static void ResponseonGET() {
 
 		response = RestAssured.given().request(Method.GET,"");
 		responseStr = response.asPrettyString();
 	}
 
+	//Response is saved in .txt file
 	public static void saveResponseInFile() {
 
 		try {		
@@ -51,8 +54,9 @@ public class API {
 
 	public static void addIsRoofAttribute() {
 		try {
+			//Adding attribute is_roof to response
 			JsonElement jsonElement = new Gson().fromJson(responseStr, JsonElement.class);
-			JsonArray gsonarray = jsonElement.getAsJsonArray();
+			JsonArray gsonarray = jsonElement.getAsJsonArray(); 
 			for(JsonElement element : gsonarray) {
 				if(element.isJsonObject()) {
 					JsonObject jsonObj = element.getAsJsonObject();
@@ -70,13 +74,14 @@ public class API {
 			e.printStackTrace();
 		}
 	}
-	
+
+	//Response is saves in csv file
 	public static void saveResponseInCSV() {
 		try {
 
 			JSONArray array = new JSONArray(responseStr);
 			File file = new File(Constants.filepath+"/sfgov_"+DateFormatter.requiredFormat()+".csv");
-			System.out.println("files crsyed");
+			//System.out.println("file created");
 			String csvString = CDL.toString(array);
 			FileUtils.writeStringToFile(file, csvString);
 		}
