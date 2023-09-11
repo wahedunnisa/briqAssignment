@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-08T21:12:42 IST" name="Default suite" finished-at="2023-09-08T21:13:12 IST" duration-ms="30003">
+    <groups>
+    </groups>
+    <test started-at="2023-09-08T21:12:42 IST" name="Default test" finished-at="2023-09-08T21:13:12 IST" duration-ms="30003">
+      <class name="Tests.WebTableToCSVGenerateTest">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:null(Tests.WebTableToCSVGenerateTest)]" started-at="2023-09-08T21:12:42 IST" name="beforeclass" finished-at="2023-09-08T21:13:06 IST" duration-ms="24097" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclass -->
+        <test-method signature="gotoPage()[pri:0, instance:null(Tests.WebTableToCSVGenerateTest)]" started-at="2023-09-08T21:13:06 IST" name="gotoPage" finished-at="2023-09-08T21:13:09 IST" duration-ms="3394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gotoPage -->
+        <test-method signature="validatePage()[pri:1, instance:null(Tests.WebTableToCSVGenerateTest)]" started-at="2023-09-08T21:13:09 IST" name="validatePage" finished-at="2023-09-08T21:13:09 IST" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePage -->
+        <test-method signature="downloadFiles()[pri:2, instance:null(Tests.WebTableToCSVGenerateTest)]" started-at="2023-09-08T21:13:09 IST" name="downloadFiles" finished-at="2023-09-08T21:13:12 IST" duration-ms="2336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadFiles -->
+      </class> <!-- Tests.WebTableToCSVGenerateTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
