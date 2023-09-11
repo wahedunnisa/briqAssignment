@@ -5,7 +5,7 @@ import java.io.File;
 public class FilesUtility {
 
 	public File[] allDownloadedFiles() {
-		File[] allFiles = new File(Contants.downloadesPath).listFiles();
+		File[] allFiles = new File(Contants.downloadesPath()).listFiles();
 		return allFiles;
 	}
 	

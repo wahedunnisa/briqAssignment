@@ -1,5 +1,5 @@
 package APIBase;
- import java.io.File;
+import java.io.File;
 import java.io.FileWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -42,7 +42,7 @@ public class API {
 	public static void saveResponseInFile() {
 
 		try {		
-			FileWriter writer = new FileWriter(new File(Constants.filepath+"/sfgov_"+DateFormatter.requiredFormat()+".json"));
+			FileWriter writer = new FileWriter(new File(Constants.filepath()+"/sfgov_"+DateFormatter.requiredFormat()+".json"));
 			writer.write(response.toString());
 			writer.close();
 		}
@@ -80,7 +80,7 @@ public class API {
 		try {
 
 			JSONArray array = new JSONArray(responseStr);
-			File file = new File(Constants.filepath+"/sfgov_"+DateFormatter.requiredFormat()+".csv");
+			File file = new File(Constants.filepath()+"/sfgov_"+DateFormatter.requiredFormat()+".csv");
 			//System.out.println("file created");
 			String csvString = CDL.toString(array);
 			FileUtils.writeStringToFile(file, csvString);

@@ -3,7 +3,7 @@ package pageActions;
 import java.util.List;
 import org.testng.Assert;
 
-import PagesObjects.*;
+import pagesObjects.DownloadsPage;
 
 import org.openqa.selenium.WebElement;
 import webDriverSetup.WebDriverSetup;
@@ -31,7 +31,6 @@ public class DownloadsPageAction extends WebDriverSetup {
 	public void downloadAllFiles() {
 		List<WebElement> downloadElementsList = this.getDownloadElements();
 		for(WebElement element : downloadElementsList) {
-			//Downloading Non-png files
 			if(!element.getText().contains(".png") ) {
 				element.click();
 			}

@@ -1,11 +1,21 @@
 package utils;
 
-public interface Constants {
+import java.io.File;
 
-	String URL = "https://data.sfgov.org/resource/p4e4-a5a7.json";
+public class Constants {
+
+	public static String URL = "https://data.sfgov.org/resource/p4e4-a5a7.json";
 	
-	String filepath = System.getProperty("user.dir");
+	public static String requiredDateFormat = "MM-DD-YY-HH-MM-SS";
 	
-	String requiredDateFormat = "MM-DD-YY-HH-MM-SS";
+	public static String filepath() {
+		String FilePath = System.getProperty("user.home")+"\\briq";
+		File path = new File(FilePath);
+		if (!path.exists()){
+			path.mkdirs();
+		}
+
+		return FilePath;
+	}
 
 }

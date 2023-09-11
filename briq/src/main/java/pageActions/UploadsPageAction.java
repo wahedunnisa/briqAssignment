@@ -2,7 +2,8 @@ package pageActions;
 
 import java.io.File;
 import org.testng.Assert;
-import PagesObjects.UploadsPage;
+
+import pagesObjects.UploadsPage;
 import utils.FilesUtility;
 import webDriverSetup.WebDriverSetup;
 

@@ -12,7 +12,7 @@ import org.testng.Assert;
 
 import com.opencsv.CSVWriter;
 
-import PagesObjects.WebTableToCSVGeneratePage;
+import pagesObjects.WebTableToCSVGeneratePage;
 import utils.Contants;
 import utils.dateFormat;
 import webDriverSetup.WebDriverSetup;
@@ -58,7 +58,7 @@ public class WebTableToCVSGeneratePageAction extends WebDriverSetup{
 	public void generateCSVFile() {
 		try {
 
-			File file = new File(Contants.downloadesPath+"/webtable_"+dateFormat.currentDate()+".csv");
+			File file = new File(Contants.downloadesPath()+"/webtable_"+dateFormat.currentDate()+".csv");
 			CSVWriter csvWriter = new CSVWriter(new FileWriter(file)); // Creating new CSV file writer
 			for(ArrayList<String> row : table) {
 				String[] rowStr = row.toArray(new String[row.size()]);

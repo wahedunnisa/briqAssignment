@@ -21,7 +21,7 @@ public class WebDriverSetup {
 		if (this.driver == null) {
         	//Adding preferences
             Map<String, Object> prefs = new HashMap<String, Object>();
-            prefs.put("download.default_directory", Contants.downloadesPath);
+            prefs.put("download.default_directory", Contants.downloadesPath());
             prefs.put("profile.default_content_settings.popups", 0);
             prefs.put("safebrowsing.enabled", "false");
 
