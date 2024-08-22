@@ -1,5 +1,5 @@
 # briqAssignment
-Briq Round-1 Assignment
+Briq Assignment
 
 
 Project1 - briq
