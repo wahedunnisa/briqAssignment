@@ -1,8 +1,7 @@
-# briqAssignment
-Briq Assignment
+# Testing Projects - Practice
 
 
-Project1 - briq
+Project1 
 Contains Selenium Assignments A and B
 Run the test classes in it to get the required ourput
 
